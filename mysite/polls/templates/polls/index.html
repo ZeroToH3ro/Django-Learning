@@ -1,0 +1,12 @@
+{% extends 'polls/base.html' %}
+
+{% block content %}
+    <h1>This is template</h1>
+    <p>Hello everyone, My name is {{ name }}</p>
+    <h2>My Assets</h2>
+    <ul>
+        {% for item in assets %}
+        <li> {{item}} </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

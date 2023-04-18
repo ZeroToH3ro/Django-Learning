@@ -1,0 +1,11 @@
+{% extends 'polls/base.html' %}
+
+{% block content %}
+    {% if lst_quest %}
+        {% for item in lst_quest %}
+            <a href="{% url 'polls:detail' item.id %}"><p>{{ item.question_text }}</p></a>
+        {% endfor %}
+    {% else %}
+        <h3 style="color: red;" > Not value </h3>
+    {% endif %}
+{% endblock %}
